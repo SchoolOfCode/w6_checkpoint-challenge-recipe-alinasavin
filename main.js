@@ -13,6 +13,7 @@ const YOUR_APP_KEY = "3dc4d461a603a76bb8d7d688f5a8c5fb"
 
 
 const aTag = document.getElementById("recipe-label");
+const image = document.createElement("IMG");
 async function fetchRecipe(food) {
   //--- write your code below ---
   //--- write your code above ---
@@ -24,11 +25,13 @@ async function fetchRecipe(food) {
   console.log(dataResponse);
   // grab the first recipe in the hits array
   const dataResult = dataResponse.hits[0];
-  console.log(dataResult);
+  //console.log(dataResult);
   // replace the innerHTML with the label name of the recipe
   aTag.innerHTML = dataResult.recipe.label;
   // set the href attribute to be the recipe's url
   aTag.href = dataResult.recipe.url;
+  image.src = dataResult.recipe.image;
+  document.body.appendChild(image);
 }
 
 
