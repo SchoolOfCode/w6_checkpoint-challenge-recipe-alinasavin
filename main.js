@@ -39,3 +39,4 @@ function generateRecipeResults(recipes){
 })
 searchResultSection.innerHTML = generatedResults;
 }
+

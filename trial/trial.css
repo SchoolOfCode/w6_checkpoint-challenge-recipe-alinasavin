@@ -16,11 +16,11 @@ html {
   font-size: 12px;
   font-weight: 600px;
 }
-img {
+/* img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
 main {
   min-height: 100vh;
   width: 100%;
@@ -73,37 +73,54 @@ form input {
   font-size: 16px;
   margin: 4px 2px;
 }
-#search-result {
+/* #search-result {
   margin-top: 50px;
   width: 100%;
   display: grid;
   grid-gap: 25px;
   grid-template: auto/repeat(auto-fit, minmax(300px, 1fr));
+} */
+
+#search-result {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
-.recipe-data {
+
+/* .recipe-data {
   width: 100%;
   border-radius: 8px;
   background-color: lightgrey;
   padding: 15px;
   overflow: hidden;
+} */
+
+.recipe-data {
+  padding: 10px;
+  margin: 10px;
 }
 .recipe-img {
-  width: 100%;
-  height: 300px;
+  /* width: 100%; */
+  /* height: 300px; */
+  max-height: 200px;
+  margin-top: 20px;
   border-radius: 4px;
+  margin-bottom: 20px;
 }
-.item-result {
+
+/* .item-result {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} */
+
 .title {
   color: black;
   margin: 20px 10px 0 0;
   font-size: 1.8rem;
   font-weight: 400px;
 }
-.recipe-label {
+/* .recipe-label {
   text-decoration: none;
   text-align: center;
   width: 130px;
@@ -113,12 +130,25 @@ form input {
   font-size: 1.4rem;
   margin-top: 20px;
   align-self: flex-start;
+} */
+
+.recipe-label {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin: auto;
+  color: yellow;
+  background-color: grey;
 }
-.recipe-data {
+
+.recipe-info {
   color: black;
-  display: block;
-  margin-top: 10px;
+  /* display: block; */
+  /* margin-top: 10px; */
+  margin: auto;
   font-size: 1.4rem;
   letter-spacing: 0.05rem;
   line-height: 2rem;
+  text-align: center;
 }
